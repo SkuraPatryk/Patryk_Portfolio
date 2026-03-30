@@ -38,13 +38,6 @@ SELECT DISTINCT(Country)
 FROM world_life_expectancy
 WHERE Status = 'Developing';
 
-UPDATE world_life_expectancy
-SET Status = 'Developing'
-WHERE Country IN (
-		SELECT DISTINCT(Country)
-		FROM world_life_expectancy
-		WHERE Status = 'Developing'
-	);
 
 UPDATE world_life_expectancy t1
 JOIN world_life_expectancy t2
